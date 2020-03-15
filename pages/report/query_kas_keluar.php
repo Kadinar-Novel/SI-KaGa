@@ -1,0 +1,186 @@
+<?php
+//Kas Keluar
+  $janSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='JANUARI' AND tahun='$tahun'"));
+  $totJanSampah = $janSampah['sumNominal'];
+  $janSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='JANUARI' AND tahun='$tahun'"));
+  $totJanSecurity = $janSecurity['sumNominal'];
+  $janListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='JANUARI' AND tahun='$tahun'"));
+  $totJanListrik = $janListrik['sumNominal'];
+  $janAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='JANUARI' AND tahun='$tahun'"));
+  $totJanAqua = $janAqua['sumNominal'];
+  $janTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='JANUARI' AND tahun='$tahun'"));
+  $totJanTaman = $janTaman['sumNominal'];
+  $janLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='JANUARI' AND tahun='$tahun'"));
+  $totJanLain = $janLain['sumNominal'];
+  $totPengeluaranJan = $totJanSampah+$totJanSecurity+$totJanListrik+$totJanAqua+$totJanTaman+$totJanLain;
+
+  $febSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='FEBRUARI' AND tahun='$tahun'"));
+  $totFebSampah = $febSampah['sumNominal'];
+  $febSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='FEBRUARI' AND tahun='$tahun'"));
+  $totFebSecurity = $febSecurity['sumNominal'];
+  $febListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='FEBRUARI' AND tahun='$tahun'"));
+  $totFebListrik = $febListrik['sumNominal'];
+  $febAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='FEBRUARI' AND tahun='$tahun'"));
+  $totFebAqua = $febAqua['sumNominal'];
+  $febTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='FEBRUARI' AND tahun='$tahun'"));
+  $totFebTaman = $febTaman['sumNominal'];
+  $febLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='FEBRUARI' AND tahun='$tahun'"));
+  $totFebLain = $febLain['sumNominal'];
+  $totPengeluaranFeb = $totFebSampah+$totFebSecurity+$totFebListrik+$totFebAqua+$totFebTaman+$totFebLain;
+
+  $marSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='MARET' AND tahun='$tahun'"));
+  $totMarSampah = $marSampah['sumNominal'];
+  $marSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='MARET' AND tahun='$tahun'"));
+  $totMarSecurity = $marSecurity['sumNominal'];
+  $marListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='MARET' AND tahun='$tahun'"));
+  $totMarListrik = $marListrik['sumNominal'];
+  $marAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='MARET' AND tahun='$tahun'"));
+  $totMarAqua = $marAqua['sumNominal'];
+  $marTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='MARET' AND tahun='$tahun'"));
+  $totMarTaman = $marTaman['sumNominal'];
+  $marLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='MARET' AND tahun='$tahun'"));
+  $totMarLain = $marLain['sumNominal'];
+  $totPengeluaranMar = $totMarSampah+$totMarSecurity+$totMarListrik+$totMarAqua+$totMarTaman+$totMarLain;
+
+  $aprSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='APRIL' AND tahun='$tahun'"));
+  $totAprSampah = $aprSampah['sumNominal'];
+  $aprSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='APRIL' AND tahun='$tahun'"));
+  $totAprSecurity = $aprSecurity['sumNominal'];
+  $aprListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='APRIL' AND tahun='$tahun'"));
+  $totAprListrik = $aprListrik['sumNominal'];
+  $aprAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='APRIL' AND tahun='$tahun'"));
+  $totAprAqua = $aprAqua['sumNominal'];
+  $aprTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='APRIL' AND tahun='$tahun'"));
+  $totAprTaman = $aprTaman['sumNominal'];
+  $aprLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='APRIL' AND tahun='$tahun'"));
+  $totAprLain = $aprLain['sumNominal'];
+  $totPengeluaranApr = $totAprSampah+$totAprSecurity+$totAprListrik+$totAprAqua+$totAprTaman+$totAprLain;
+
+  $meiSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='MEI' AND tahun='$tahun'"));
+  $totMeiSampah = $meiSampah['sumNominal'];
+  $meiSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='MEI' AND tahun='$tahun'"));
+  $totMeiSecurity = $meiSecurity['sumNominal'];
+  $meiListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='MEI' AND tahun='$tahun'"));
+  $totMeiListrik = $meiListrik['sumNominal'];
+  $meiAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='MEI' AND tahun='$tahun'"));
+  $totMeiAqua = $meiAqua['sumNominal'];
+  $meiTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='MEI' AND tahun='$tahun'"));
+  $totMeiTaman = $meiTaman['sumNominal'];
+  $meiLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='MEI' AND tahun='$tahun'"));
+  $totMeiLain = $meiLain['sumNominal'];
+  $totPengeluaranMei = $totMeiSampah+$totMeiSecurity+$totMeiListrik+$totMeiAqua+$totMeiTaman+$totMeiLain;
+
+  $junSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='JUNI' AND tahun='$tahun'"));
+  $totJunSampah = $junSampah['sumNominal'];
+  $junSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='JUNI' AND tahun='$tahun'"));
+  $totJunSecurity = $junSecurity['sumNominal'];
+  $junListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='JUNI' AND tahun='$tahun'"));
+  $totJunListrik = $junListrik['sumNominal'];
+  $junAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='JUNI' AND tahun='$tahun'"));
+  $totJunAqua = $junAqua['sumNominal'];
+  $junTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='JUNI' AND tahun='$tahun'"));
+  $totJunTaman = $junTaman['sumNominal'];
+  $junLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='JUNI' AND tahun='$tahun'"));
+  $totJunLain = $junLain['sumNominal'];
+  $totPengeluaranJun = $totJunSampah+$totJunSecurity+$totJunListrik+$totJunAqua+$totJunTaman+$totJunLain;
+
+  $julSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='JULI' AND tahun='$tahun'"));
+  $totJulSampah = $julSampah['sumNominal'];
+  $julSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='JULI' AND tahun='$tahun'"));
+  $totJulSecurity = $julSecurity['sumNominal'];
+  $julListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='JULI' AND tahun='$tahun'"));
+  $totJulListrik = $julListrik['sumNominal'];
+  $julAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='JULI' AND tahun='$tahun'"));
+  $totJulAqua = $julAqua['sumNominal'];
+  $julTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='JULI' AND tahun='$tahun'"));
+  $totJulTaman = $julTaman['sumNominal'];
+  $julLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='JULI' AND tahun='$tahun'"));
+  $totJulLain = $julLain['sumNominal'];
+  $totPengeluaranJul = $totJulSampah+$totJulSecurity+$totJulListrik+$totJulAqua+$totJulTaman+$totJulLain;
+
+  $aguSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='AGUSTUS' AND tahun='$tahun'"));
+  $totAguSampah = $aguSampah['sumNominal'];
+  $aguSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='AGUSTUS' AND tahun='$tahun'"));
+  $totAguSecurity = $aguSecurity['sumNominal'];
+  $aguListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='AGUSTUS' AND tahun='$tahun'"));
+  $totAguListrik = $aguListrik['sumNominal'];
+  $aguAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='AGUSTUS' AND tahun='$tahun'"));
+  $totAguAqua = $aguAqua['sumNominal'];
+  $aguTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='AGUSTUS' AND tahun='$tahun'"));
+  $totAguTaman = $aguTaman['sumNominal'];
+  $aguLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='AGUSTUS' AND tahun='$tahun'"));
+  $totAguLain = $aguLain['sumNominal'];
+  $totPengeluaranAgu = $totAguSampah+$totAguSecurity+$totAguListrik+$totAguAqua+$totAguTaman+$totAguLain;
+
+  $sepSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='SEPTEMBER' AND tahun='$tahun'"));
+  $totSepSampah = $sepSampah['sumNominal'];
+  $sepSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='SEPTEMBER' AND tahun='$tahun'"));
+  $totSepSecurity = $sepSecurity['sumNominal'];
+  $sepListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='SEPTEMBER' AND tahun='$tahun'"));
+  $totSepListrik = $sepListrik['sumNominal'];
+  $sepAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='SEPTEMBER' AND tahun='$tahun'"));
+  $totSepAqua = $sepAqua['sumNominal'];
+  $sepTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='SEPTEMBER' AND tahun='$tahun'"));
+  $totSepTaman = $sepTaman['sumNominal'];
+  $sepLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='SEPTEMBER' AND tahun='$tahun'"));
+  $totSepLain = $sepLain['sumNominal'];
+  $totPengeluaranSep = $totSepSampah+$totSepSecurity+$totSepListrik+$totSepAqua+$totSepTaman+$totSepLain;
+
+  $oktSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='OKTOBER' AND tahun='$tahun'"));
+  $totOktSampah = $oktSampah['sumNominal'];
+  $oktSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='OKTOBER' AND tahun='$tahun'"));
+  $totOktSecurity = $oktSecurity['sumNominal'];
+  $oktListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='OKTOBER' AND tahun='$tahun'"));
+  $totOktListrik = $oktListrik['sumNominal'];
+  $oktAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='OKTOBER' AND tahun='$tahun'"));
+  $totOktAqua = $oktAqua['sumNominal'];
+  $oktTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='OKTOBER' AND tahun='$tahun'"));
+  $totOktTaman = $oktTaman['sumNominal'];
+  $oktLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='OKTOBER' AND tahun='$tahun'"));
+  $totOktLain = $oktLain['sumNominal'];
+  $totPengeluaranOkt = $totOktSampah+$totOktSecurity+$totOktListrik+$totOktAqua+$totOktTaman+$totOktLain;
+
+  $novSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='NOVEMBER' AND tahun='$tahun'"));
+  $totNovSampah = $novSampah['sumNominal'];
+  $novSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='NOVEMBER' AND tahun='$tahun'"));
+  $totNovSecurity = $novSecurity['sumNominal'];
+  $novListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='NOVEMBER' AND tahun='$tahun'"));
+  $totNovListrik = $novListrik['sumNominal'];
+  $novAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='NOVEMBER' AND tahun='$tahun'"));
+  $totNovAqua = $novAqua['sumNominal'];
+  $novTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='NOVEMBER' AND tahun='$tahun'"));
+  $totNovTaman = $novTaman['sumNominal'];
+  $novLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='NOVEMBER' AND tahun='$tahun'"));
+  $totNovLain = $novLain['sumNominal'];
+  $totPengeluaranNov = $totNovSampah+$totNovSecurity+$totNovListrik+$totNovAqua+$totNovTaman+$totNovLain;
+
+  $desSampah = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '5' AND bulan='DESEMBER' AND tahun='$tahun'"));
+  $totDesSampah = $desSampah['sumNominal'];
+  $desSecurity = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '1' AND bulan='DESEMBER' AND tahun='$tahun'"));
+  $totDesSecurity = $desSecurity['sumNominal'];
+  $desListrik = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '2' AND bulan='DESEMBER' AND tahun='$tahun'"));
+  $totDesListrik = $desListrik['sumNominal'];
+  $desAqua = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '3' AND bulan='DESEMBER' AND tahun='$tahun'"));
+  $totDesAqua = $desAqua['sumNominal'];
+  $desTaman = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '4' AND bulan='DESEMBER' AND tahun='$tahun'"));
+  $totDesTaman = $desTaman['sumNominal'];
+  $desLain = mysqli_fetch_array(mysqli_query($conn, "SELECT SUM(nominal) AS sumNominal FROM kas_keluar WHERE jenis_pengeluaran = '6' AND bulan='DESEMBER' AND tahun='$tahun'"));
+  $totDesLain = $desLain['sumNominal'];
+  $totPengeluaranDes = $totDesSampah+$totDesSecurity+$totDesListrik+$totDesAqua+$totDesTaman+$totDesLain;
+
+
+  $saldoKasJan = $total_januari-$totPengeluaranJan;
+  $saldoKasFeb = $total_februari-$totPengeluaranFeb;
+  $saldoKasMar = $total_maret-$totPengeluaranMar;
+  $saldoKasApr = $total_april-$totPengeluaranApr;
+  $saldoKasMei = $total_mei-$totPengeluaranMei;
+  $saldoKasJun = $total_juni-$totPengeluaranJun;
+  $saldoKasJul = $total_juli-$totPengeluaranJul;
+  $saldoKasAgu = $total_agustus-$totPengeluaranAgu;
+  $saldoKasSep = $total_september-$totPengeluaranSep;
+  $saldoKasOkt = $total_oktober-$totPengeluaranOkt;
+  $saldoKasNov = $total_november-$totPengeluaranNov;
+  $saldoKasDes = $total_desember-$totPengeluaranDes;
+
+  $sisaSaldo = $saldoKasJan+$saldoKasFeb+$saldoKasMar+$saldoKasApr+$saldoKasMei+$saldoKasJun+$saldoKasJul+$saldoKasAgu+$saldoKasSep+$saldoKasOkt+$saldoKasNov+$saldoKasDes;
+  ?>
