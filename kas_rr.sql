@@ -146,9 +146,9 @@ CREATE TABLE IF NOT EXISTS `kas_masuk` (
   `bayarDes` int(11) NOT NULL DEFAULT 0,
   `modtime` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`idKas`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table kas_rr.kas_masuk: ~10 rows (approximately)
+-- Dumping data for table kas_rr.kas_masuk: ~23 rows (approximately)
 DELETE FROM `kas_masuk`;
 /*!40000 ALTER TABLE `kas_masuk` DISABLE KEYS */;
 INSERT INTO `kas_masuk` (`idKas`, `no_rumah`, `januari`, `februari`, `maret`, `april`, `mei`, `juni`, `juli`, `agustus`, `september`, `oktober`, `november`, `desember`, `tahun`, `total`, `bayarJan`, `bayarFeb`, `bayarMar`, `bayarApr`, `bayarMei`, `bayarJun`, `bayarJul`, `bayarAgu`, `bayarSep`, `bayarOkt`, `bayarNov`, `bayarDes`, `modtime`) VALUES
@@ -161,7 +161,20 @@ INSERT INTO `kas_masuk` (`idKas`, `no_rumah`, `januari`, `februari`, `maret`, `a
 	(7, 'B2', '', '', '', '', '', '', '', '2020-03-15', '2020-03-15', '2020-03-15', '2020-03-15', '2020-03-15', '2019', 900000, 0, 0, 0, 0, 0, 0, 0, 180000, 180000, 180000, 180000, 180000, '2020-03-15 11:18:46'),
 	(8, 'B3', '', '', '', '', '', '', '', '', '', '2020-03-15', '2020-03-15', '2020-03-15', '2019', 540000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 180000, 180000, 180000, '2020-03-15 11:18:47'),
 	(9, 'B4', '', '', '', '', '', '', '', '', '2020-03-15', '2020-03-15', '2020-03-15', '2020-03-15', '2019', 720000, 0, 0, 0, 0, 0, 0, 0, 0, 180000, 180000, 180000, 180000, '2020-03-15 11:18:47'),
-	(10, 'B5', '', '', '', '', '', '', '', '', '', '2020-03-15', '2020-03-15', '2020-03-15', '2019', 540000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 180000, 180000, 180000, '2020-03-15 11:18:47');
+	(10, 'B5', '', '', '', '', '', '', '', '', '', '2020-03-15', '2020-03-15', '2020-03-15', '2019', 540000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 180000, 180000, 180000, '2020-03-15 11:18:47'),
+	(18, 'B6', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:12'),
+	(19, 'B7', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:18'),
+	(20, 'B8', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:24'),
+	(21, 'A1', '2021-08-14', '2021-08-14', '', '', '', '', '', '', '', '', '', '', '2021', 360000, 180000, 180000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:35'),
+	(22, 'A2', '', '', '', '', '', '', '', '', '', '', '', '', '2021', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:35'),
+	(23, 'A3', '', '', '', '', '', '', '', '', '', '', '', '', '2021', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:35'),
+	(24, 'A3', '', '', '', '', '', '', '', '', '', '', '', '', '2021', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:35'),
+	(25, 'A5', '', '', '', '', '', '', '', '', '', '', '', '', '2021', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:35'),
+	(26, 'B1', '', '', '', '', '', '', '', '', '', '', '', '', '2021', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:36'),
+	(27, 'B2', '', '', '', '', '', '', '', '', '', '', '', '', '2021', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:36'),
+	(28, 'B3', '', '', '', '', '', '', '', '', '', '', '', '', '2021', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:36'),
+	(29, 'B4', '', '', '', '', '', '', '', '', '', '', '', '', '2021', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:36'),
+	(30, 'B5', '', '', '', '', '', '', '', '', '', '', '', '', '2021', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-08-14 13:50:36');
 /*!40000 ALTER TABLE `kas_masuk` ENABLE KEYS */;
 
 -- Dumping structure for table kas_rr.kas_masuk_lain
@@ -176,7 +189,7 @@ CREATE TABLE IF NOT EXISTS `kas_masuk_lain` (
   PRIMARY KEY (`idKasMasukLain`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
 
--- Dumping data for table kas_rr.kas_masuk_lain: ~1 rows (approximately)
+-- Dumping data for table kas_rr.kas_masuk_lain: ~0 rows (approximately)
 DELETE FROM `kas_masuk_lain`;
 /*!40000 ALTER TABLE `kas_masuk_lain` DISABLE KEYS */;
 INSERT INTO `kas_masuk_lain` (`idKasMasukLain`, `bulan`, `tahun`, `deskripsi_pemasukan`, `nominal`, `tgl_pemasukan`, `modtime`) VALUES
@@ -210,9 +223,9 @@ CREATE TABLE IF NOT EXISTS `modul` (
   `posisi` int(11) NOT NULL,
   `icon_menu` varchar(150) NOT NULL,
   PRIMARY KEY (`id_modul`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table kas_rr.modul: ~5 rows (approximately)
+-- Dumping data for table kas_rr.modul: ~6 rows (approximately)
 DELETE FROM `modul`;
 /*!40000 ALTER TABLE `modul` DISABLE KEYS */;
 INSERT INTO `modul` (`id_modul`, `id_menu`, `nama_modul`, `link_menu`, `link_folder`, `posisi`, `icon_menu`) VALUES
@@ -220,8 +233,23 @@ INSERT INTO `modul` (`id_modul`, `id_menu`, `nama_modul`, `link_menu`, `link_fol
 	(2, 1, 'Pengeluaran', 'index.php?page=kas_keluar', 'pages/kas_keluar/kas_keluar.php', 3, 'fa fa-money'),
 	(3, 2, 'Kas Warga', 'index.php?page=report', 'pages/report/report.php', 1, 'fa fa-book'),
 	(4, 1, 'Pemasukan Lain', 'index.php?page=kas_masuk_lain', 'pages/kas_masuk_lain/kas_masuk_lain.php', 2, 'fa fa-plus-square'),
-	(5, 3, 'Rumah Warga', 'index.php?page=rumah_warga', 'pages/rumah_warga/rumah_warga.php', 1, 'fa fa-bank');
+	(5, 3, 'Rumah Warga', 'index.php?page=rumah_warga', 'pages/rumah_warga/rumah_warga.php', 1, 'fa fa-bank'),
+	(6, 3, 'Nominal Kas', 'index.php?page=nominal_bulanan', 'pages/nominal_bulanan/nominal_bulanan.php', 2, 'fa fa-money');
 /*!40000 ALTER TABLE `modul` ENABLE KEYS */;
+
+-- Dumping structure for table kas_rr.nominal_bulanan
+CREATE TABLE IF NOT EXISTS `nominal_bulanan` (
+  `idNominal` int(11) NOT NULL AUTO_INCREMENT,
+  `nominal` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`idNominal`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table kas_rr.nominal_bulanan: ~0 rows (approximately)
+DELETE FROM `nominal_bulanan`;
+/*!40000 ALTER TABLE `nominal_bulanan` DISABLE KEYS */;
+INSERT INTO `nominal_bulanan` (`idNominal`, `nominal`) VALUES
+	(1, 100000);
+/*!40000 ALTER TABLE `nominal_bulanan` ENABLE KEYS */;
 
 -- Dumping structure for table kas_rr.user
 CREATE TABLE IF NOT EXISTS `user` (
@@ -234,7 +262,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Dumping data for table kas_rr.user: ~1 rows (approximately)
+-- Dumping data for table kas_rr.user: ~0 rows (approximately)
 DELETE FROM `user`;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` (`id_user`, `nama_lengkap`, `usernm`, `passwd`, `level`, `last_login`) VALUES

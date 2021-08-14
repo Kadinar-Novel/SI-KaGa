@@ -16,6 +16,8 @@
 		$act = '';
 	}
 
+	$getNominal = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM nominal_bulanan"));
+
 	$aksi = 'pages/kas_masuk/act_kas_masuk.php';
 
 	switch ($act) {
@@ -114,7 +116,7 @@
                   	</div>					
 					<div class='form-group'><label >Tanggal Bayar</label>
 					<input type='text' class='form-control' name='tglBayar' value='".date('Y-m-d', strtotime('now'))."' id='datepicker'>
-					<input type='hidden' class='form-control' name='bayar' value='180000'>
+					<input type='hidden' class='form-control' name='bayar' value='".$getNominal['nominal']."'>
 					</div>
 					<div class='form-group'><label >TOTAL SUDAH DIBAYAR</label>
 					<input type='text' class='form-control' placeholder='Total' name='total' value='"?><?php echo isset($c['total']) ? $c['total'] : '';?><?php echo"'"?> <?php echo isset($c['total']) ? ' ' : ' ';?><?php echo" readonly>
