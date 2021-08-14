@@ -189,7 +189,7 @@ CREATE TABLE IF NOT EXISTS `kas_masuk_lain` (
   PRIMARY KEY (`idKasMasukLain`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
 
--- Dumping data for table kas_rr.kas_masuk_lain: ~0 rows (approximately)
+-- Dumping data for table kas_rr.kas_masuk_lain: ~1 rows (approximately)
 DELETE FROM `kas_masuk_lain`;
 /*!40000 ALTER TABLE `kas_masuk_lain` DISABLE KEYS */;
 INSERT INTO `kas_masuk_lain` (`idKasMasukLain`, `bulan`, `tahun`, `deskripsi_pemasukan`, `nominal`, `tgl_pemasukan`, `modtime`) VALUES
@@ -244,7 +244,7 @@ CREATE TABLE IF NOT EXISTS `nominal_bulanan` (
   PRIMARY KEY (`idNominal`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table kas_rr.nominal_bulanan: ~0 rows (approximately)
+-- Dumping data for table kas_rr.nominal_bulanan: ~1 rows (approximately)
 DELETE FROM `nominal_bulanan`;
 /*!40000 ALTER TABLE `nominal_bulanan` DISABLE KEYS */;
 INSERT INTO `nominal_bulanan` (`idNominal`, `nominal`) VALUES
@@ -262,7 +262,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Dumping data for table kas_rr.user: ~0 rows (approximately)
+-- Dumping data for table kas_rr.user: ~1 rows (approximately)
 DELETE FROM `user`;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` (`id_user`, `nama_lengkap`, `usernm`, `passwd`, `level`, `last_login`) VALUES
